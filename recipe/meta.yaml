@@ -14,21 +14,17 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - {{ compiler('fortran') }}
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ compiler('m2w64_fortran') }}  # [win]
   host:
     - python
     - pip
-    - m2w64-toolchain  # [win]
-    - libpython  # [win]
+    - numba >=0.4
     - numpy
     - scipy >=0.19
     - matplotlib-base >=2.0
   run:
     - python
     - {{ pin_compatible('numpy') }}
+    - numba >=0.4
     - scipy >=0.19
     - matplotlib-base >=2.0
 
