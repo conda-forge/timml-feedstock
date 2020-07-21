@@ -17,14 +17,14 @@ requirements:
   host:
     - python
     - pip
-    - numba >=0.4
+    - numba >=0.50.1
     - numpy
     - scipy >=0.19
     - matplotlib-base >=2.0
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - numba >=0.4
+    - numba >=0.50.1
     - scipy >=0.19
     - matplotlib-base >=2.0
 
