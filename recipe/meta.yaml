@@ -18,7 +18,7 @@ requirements:
     - python
     - pip
     - numba >=0.50.1
-    - numpy
+    - numpy >=1.15
     - scipy >=0.19
     - matplotlib-base >=2.0
   run:
