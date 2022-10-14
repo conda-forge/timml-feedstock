@@ -1,4 +1,4 @@
-{% set version = "6.0.1" %}
+{% set version = "6.0.2" %}
 
 package:
   name: timml
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/mbakker7/timml/archive/v{{ version }}.tar.gz
-  sha256: 6bea2fdb4a81a9511ee4bd75db4a7ce090244da0dd6c72926a3e1d8ab7914e92
+  sha256: 514ae54fd19cbe44f8edf3a1e34384f1705169783b695ac527669180cc2a6b0d
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<35]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
