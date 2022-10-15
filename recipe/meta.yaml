@@ -1,4 +1,4 @@
-{% set version = "6.0.2" %}
+{% set version = "6.04" %}
 
 package:
   name: timml
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/mbakker7/timml/archive/v{{ version }}.tar.gz
-  sha256: 514ae54fd19cbe44f8edf3a1e34384f1705169783b695ac527669180cc2a6b0d
+  sha256: 4975d7bac7b7e50f2393ef67213d636c6074ce1d8d0ab166e6a079505964be36
 
 build:
   number: 0
