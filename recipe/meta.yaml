@@ -1,12 +1,13 @@
-{% set version = "6.04" %}
+{% set name = "timml" %}
+{% set version = "6.1.0" %}
 
 package:
-  name: timml
+  name: {{ name |lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/mbakker7/timml/archive/v{{ version }}.tar.gz
-  sha256: 4975d7bac7b7e50f2393ef67213d636c6074ce1d8d0ab166e6a079505964be36
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 232ed8395b1e16fc29a7ff5ff1a813873bfff86ef2263cbc23dade4aca1ad32b
 
 build:
   number: 0
