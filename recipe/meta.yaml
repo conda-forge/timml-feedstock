@@ -1,5 +1,5 @@
 {% set name = "timml" %}
-{% set version = "6.1.0" %}
+{% set version = "6.2.0" %}
 
 package:
   name: {{ name |lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 232ed8395b1e16fc29a7ff5ff1a813873bfff86ef2263cbc23dade4aca1ad32b
+  sha256: 7adccf015ae09c0f4e625754ead7d641d663adacff1247270f92e8f99d688054
 
 build:
-  number: 2
+  number: 0
   skip: true  # [py<35]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
