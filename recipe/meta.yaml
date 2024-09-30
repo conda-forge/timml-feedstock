@@ -11,13 +11,14 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<35]
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - python >=3.10
     - pip
+    - setuptools
     - numba >=0.50.1
     - numpy >=1.15
     - scipy >=0.19
