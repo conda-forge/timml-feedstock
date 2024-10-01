@@ -1,5 +1,5 @@
 {% set name = "timml" %}
-{% set version = "6.4.1" %}
+{% set version = "6.5.0" %}
 
 package:
   name: {{ name |lower }}
@@ -7,23 +7,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8c4915863d7f59d66087b01d746b91e05dd5e4f1f71dced683dff9ef01b44eaa
+  sha256: 6e43f566ffbc4b0fb48a681ef73222a03d477d230ee0d5f49c667f3575742182
 
 build:
-  number: 2
-  skip: true  # [py<35]
+  number: 0
+  noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python >=3.10
     - pip
+    - setuptools
     - numba >=0.50.1
     - numpy >=1.15
     - scipy >=0.19
     - matplotlib-base >=2.0
   run:
-    - python
+    - python >=3.10
     - {{ pin_compatible('numpy') }}
     - numba >=0.50.1
     - scipy >=0.19
