@@ -1,13 +1,13 @@
 {% set name = "timml" %}
-{% set version = "6.5.0" %}
+{% set version = "6.6.0" %}
 
 package:
   name: {{ name |lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6e43f566ffbc4b0fb48a681ef73222a03d477d230ee0d5f49c667f3575742182
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 82cca07ca2c49ab6a7f1ae53c9bec0bb35c041deacd7b6363dc88f0b0f07953c
 
 build:
   number: 0
