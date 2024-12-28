@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "timml" %}
 {% set version = "6.6.0" %}
 
@@ -10,13 +11,13 @@ source:
   sha256: 82cca07ca2c49ab6a7f1ae53c9bec0bb35c041deacd7b6363dc88f0b0f07953c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - setuptools
     - numba >=0.50.1
@@ -24,13 +25,15 @@ requirements:
     - scipy >=0.19
     - matplotlib-base >=2.0
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - {{ pin_compatible('numpy') }}
     - numba >=0.50.1
     - scipy >=0.19
     - matplotlib-base >=2.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - timml
 
