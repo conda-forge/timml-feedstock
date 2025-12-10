@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "timml" %}
-{% set version = "6.7.0" %}
+{% set version = "6.8.0" %}
 
 package:
   name: {{ name |lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 605e088e2d8010844146f173014a34736048cd39d443b4628f89995468b0c8aa
+  sha256: 5549576b496e77ad8b1bcc222fbebc11063cd79c829e14269f3fe3d01dc5d346
 
 build:
   number: 0
