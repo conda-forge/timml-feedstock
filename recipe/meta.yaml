@@ -1,4 +1,4 @@
-{% set python_min = "3.10" %}
+{% set python_min = "3.11" %}
 {% set name = "timml" %}
 {% set version = "6.8.0" %}
 
